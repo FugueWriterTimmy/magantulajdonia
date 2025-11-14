@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Micronation Hub</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, #e0e6ff, #ffffff);
+        }
+        header {
+            background: #1a2a6c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            background: #233a8a;
+            padding: 10px;
+            gap: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 25px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>Welcome to the Micronation Hub</header>
+
+    <nav>
+        <a href="#" onclick="addTab('contrapunctia.html')">Contrapunctia</a>
+        <a href="#" onclick="addTab('curryland.html')">Curryland</a>
+    </nav>
+
+    <div class="container">
+        <h2>What Is a Micronation?</h2>
+        <p>
+            A micronation is a small, self-declared entity that claims to be an independent nation. People
+            create micronations for many different reasons, be it political statements, worldbuilding, or simply
+            because it’s entertaining to imagine a tiny country with its own laws, symbols, and
+            culture.
+        </p>
+    </div>
+
+    <script>
+        function addTab(page) {
+            const current = window.location.href;
+            if (!current.includes(page)) {
+                window.location.href = current + page;
+            }
+        }
+    </script>
+</body>
+</html>
